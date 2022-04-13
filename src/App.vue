@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ProductListOne :products="products" />
-    <ProductListTwo :products="products" />
+    <ProductListOne />
+    <ProductListTwo />
   </div>
 </template>
 <script>
