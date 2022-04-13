@@ -28,6 +28,12 @@ export default createStore({
       });
     },
   },
-  actions: {},
+  actions: {
+    reducePrice: (context) => {
+      setTimeout(function () {
+        context.commit("reducePrice");
+      }, 2000);
+    },
+  },
   modules: {},
 });
