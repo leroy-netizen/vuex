@@ -7,6 +7,7 @@
         <span class="price"><i>Ksh</i>{{ product.price }}</span>
       </li>
     </ul>
+    <button @click="reducePrice">Reduce price</button>
   </div>
 </template>
 <script>
@@ -20,6 +21,14 @@ export default {
 
     saleProducts() {
       return this.$store.getters.saleProducts;
+    },
+  },
+  methods: {
+    reducePrice: function () {
+      // this.$store.state.products.forEach((product) => {
+      //   product.price -= 1;
+      // });
+      this.$store.commit("reducePrice");
     },
   },
 };
